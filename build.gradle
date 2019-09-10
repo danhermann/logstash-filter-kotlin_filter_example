@@ -17,8 +17,8 @@ pluginInfo.authors         = ['Elasticsearch']
 pluginInfo.email           = ['info@elastic.co']
 pluginInfo.homepage        = "http://www.elastic.co/guide/en/logstash/current/index.html"
 pluginInfo.pluginType      = "filter"
-pluginInfo.pluginClass     = "kfilter"
-pluginInfo.pluginName      = "kfilter" // must match the @LogstashPlugin annotation in the main plugin class
+pluginInfo.pluginClass     = "KotlinFilterExample"
+pluginInfo.pluginName      = "kotlin_filter_example" // must match the @LogstashPlugin annotation in the main plugin class
 // ===========================================================================
 
 sourceCompatibility = 1.8

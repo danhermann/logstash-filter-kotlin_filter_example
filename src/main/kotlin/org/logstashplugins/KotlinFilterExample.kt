@@ -9,8 +9,8 @@ import co.elastic.logstash.api.LogstashPlugin
 import co.elastic.logstash.api.PluginConfigSpec
 import co.elastic.logstash.api.PluginHelper
 
-@LogstashPlugin(name = "kfilter")
-class kfilter(id: String, config: Configuration, context: Context) : Filter {
+@LogstashPlugin(name = "kotlin_filter_example")
+class KotlinFilterExample(id: String, config: Configuration, context: Context) : Filter {
 
     private val filterId: String = id
 
@@ -19,6 +19,11 @@ class kfilter(id: String, config: Configuration, context: Context) : Filter {
     }
 
     override fun filter(p0: MutableCollection<Event>?, p1: FilterMatchListener?): MutableCollection<Event>? {
+        if (p0 != null) {
+            for (e:Event in p0) {
+                e.setField("kfilter", "kvalue")
+            }
+        }
         return p0;
     }
 
